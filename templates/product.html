@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citra Abadi - Produk</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/responsive.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Perbaikan Path CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,17 +15,19 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Citra Abadi Logo" class="logo-img">
+                <a href="/">
+                    <!-- Perbaikan Path Gambar Logo -->
+                    <img src="/static/img/logo.png" alt="Citra Abadi Logo" class="logo-img">
                     <span class="logo-text">CITRA ABADI</span>
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Beranda</a>
-                <a href="about.html" class="nav-link">Tentang Kami</a>
-                <a href="product.html" class="nav-link active">Produk</a>
-                <a href="contact.html" class="nav-link">Kontak</a>
-                <a href="developer.html" class="nav-link">Developer</a>
+                <!-- Perbaikan Navigasi Link -->
+                <a href="/" class="nav-link">Beranda</a>
+                <a href="/about" class="nav-link">Tentang Kami</a>
+                <a href="/product" class="nav-link active">Produk</a>
+                <a href="/contact" class="nav-link">Kontak</a>
+                <a href="/developer" class="nav-link">Developer</a>
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Cari produk...">
                 </div>
@@ -47,29 +50,31 @@
                 <h1>Produk</h1>
             </div>
             <div class="products-grid" id="products-grid">
-                <!-- Products will be loaded dynamically -->
+                <!-- Produk akan dimuat secara dinamis oleh main.js -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
                 <p>&copy; 2025 Citra Abadi. All rights reserved.</p>
                 <p>Nglegok, Kab. Blitar | Telp: (+62) 813-3599-7984</p>
             </div>
-        <div class="footer-dev">
-        <p>Developed with ❤️ by <span class="dev-name">Kelompok 4</span> | <span class="subject">PWEB</span></p>
-    </div>
-</footer>
+            <div class="footer-dev">
+                <p>Developed with ❤️ by <span class="dev-name">Kelompok 4</span> | <span class="subject">PWEB</span></p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Product Detail Modal -->
     <div class="product-modal" id="product-modal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="close-modal" id="close-modal">&times;</span>
-            <div class="modal-body" id="modal-body">
-                <!-- Product details will be loaded here -->
+            <!-- Elemen kunci yang harus ada agar main.js bisa bekerja -->
+            <div id="modal-body">
+            <!-- Isi form akan disuntikkan secara otomatis oleh main.js -->
             </div>
         </div>
     </div>
@@ -81,7 +86,7 @@
             <button id="close-cart" aria-label="Tutup keranjang">&times;</button>
         </div>
         <div class="cart-items" id="cart-items">
-            <!-- Cart items will be added here dynamically -->
+            <!-- Item keranjang akan ditambahkan secara dinamis -->
         </div>
         <div class="cart-total">
             <p>Total: <span id="cart-total-price">Rp 0</span></p>
@@ -89,6 +94,7 @@
         </div>
     </div>
 
-    <script src="assets/main.js"></script>
+    <!-- Perbaikan Path JavaScript -->
+    <script src="/static/js/main.js"></script>
 </body>
 </html>

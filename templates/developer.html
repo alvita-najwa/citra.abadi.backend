@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citra Abadi - Developer</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/responsive.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Perbaikan Path CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Citra Abadi Logo" class="logo-img">
+                <a href="/">
+                    <img src="/static/img/logo.png" alt="Citra Abadi Logo" class="logo-img">
                     <span class="logo-text">CITRA ABADI</span>
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Beranda</a>
-                <a href="about.html" class="nav-link">Tentang Kami</a>
-                <a href="product.html" class="nav-link">Produk</a>
-                <a href="contact.html" class="nav-link">Kontak</a>
-                <a href="developer.html" class="nav-link active">Developer</a>
+                <a href="/" class="nav-link">Beranda</a>
+                <a href="/about" class="nav-link">Tentang Kami</a>
+                <a href="/product" class="nav-link">Produk</a>
+                <a href="/contact" class="nav-link">Kontak</a>
+                <a href="/developer" class="nav-link active">Developer</a>
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Cari produk...">
                 </div>
@@ -52,7 +53,7 @@
                 <div class="developer-row">
                     <div class="developer-card">
                         <div class="developer-img">
-                            <img src="img/Evan.png" alt="Evan Cristianto">
+                            <img src="/static/img/Evan.png" alt="Evan Cristianto">
                         </div>
                         <h3>Evan Cristianto</h3>
                         <p class="developer-role">Halaman Developer</p>
@@ -61,7 +62,7 @@
                     
                     <div class="developer-card">
                         <div class="developer-img">
-                            <img src="img/lutfhan.jpg" alt="Ahmad Luthfan Wijayana">
+                            <img src="/static/img/lutfhan.jpg" alt="Ahmad Luthfan Wijayana">
                         </div>
                         <h3>Ahmad Luthfan Wijayana</h3>
                         <p class="developer-role">Halaman Kontak</p>
@@ -70,7 +71,7 @@
                     
                     <div class="developer-card">
                         <div class="developer-img">
-                            <img src="img/johan.jpg" alt="Johan Alvin Kurniawan">
+                            <img src="/static/img/johan.jpg" alt="Johan Alvin Kurniawan">
                         </div>
                         <h3>Johan Alvin Kurniawan</h3>
                         <p class="developer-role">Halaman Produk</p>
@@ -82,7 +83,7 @@
                 <div class="developer-row">
                     <div class="developer-card">
                         <div class="developer-img">
-                            <img src="img/alvita.jpg" alt="Alvita Najwa Zahrotun N.">
+                            <img src="/static/img/alvita.jpg" alt="Alvita Najwa Zahrotun N.">
                         </div>
                         <h3>Alvita Najwa Zahrotun N.</h3>
                         <p class="developer-role">Halaman Beranda</p>
@@ -91,7 +92,7 @@
                     
                     <div class="developer-card">
                         <div class="developer-img">
-                            <img src="img/cinta.jpg" alt="Keisya Cinta Adisti">
+                            <img src="/static/img/cinta.jpg" alt="Keisya Cinta Adisti">
                         </div>
                         <h3>Keisya Cinta Adisti</h3>
                         <p class="developer-role">Halaman Tentang Kami</p>
@@ -122,7 +123,7 @@
             <button id="close-cart">&times;</button>
         </div>
         <div class="cart-items" id="cart-items">
-            <!-- Cart items will be added here dynamically -->
+            <!-- Items added dynamically -->
         </div>
         <div class="cart-total">
             <p>Total: <span id="cart-total-price">Rp 0</span></p>
@@ -130,6 +131,7 @@
         </div>
     </div>
 
-    <script src="assets/main.js"></script>
+    <!-- Perbaikan Path JS -->
+    <script src="/static/js/main.js"></script>
 </body>
 </html>

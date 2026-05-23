@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citra Abadi - Beranda</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/responsive.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Perbaikan Path CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Citra Abadi Logo" class="logo-img">
+                <a href="/">
+                    <!-- Perbaikan Path Gambar Logo -->
+                    <img src="/static/img/logo.png" alt="Citra Abadi Logo" class="logo-img">
                     <span class="logo-text">CITRA ABADI</span>
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Beranda</a>
-                <a href="about.html" class="nav-link">Tentang Kami</a>
-                <a href="product.html" class="nav-link">Produk</a>
-                <a href="contact.html" class="nav-link">Kontak</a>
-                <a href="developer.html" class="nav-link">Developer</a>
+                <a href="/" class="nav-link active">Beranda</a>
+                <a href="/about" class="nav-link">Tentang Kami</a>
+                <a href="/product" class="nav-link">Produk</a>
+                <a href="/contact" class="nav-link">Kontak</a>
+                <a href="/developer" class="nav-link">Developer</a>
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Cari produk...">
                 </div>
@@ -45,29 +48,30 @@
         <div class="hero-content">
             <h1>CITRA ABADI</h1>
             <p>Solusi percetakan dan desain terpercaya untuk kebutuhan Anda</p>
-            <a href="product.html" class="btn-primary">Order Now</a>
+            <a href="/product" class="btn-primary">Order Now</a>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
+            <div class="section-title">
                 <h2>Mengapa Memilih Kami?</h2>
             </div>
             <div class="features-grid">
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="img/guarantee.png" alt="Kualitas" class="feature-icon">
+                <div class="feature-item">
+                    <!-- Perbaikan Path Gambar Ikon -->
+                    <img src="/static/img/guarantee.png" alt="Kualitas" class="feature-icon">
                     <h3>Kualitas Terbaik</h3>
                     <p>Kami menggunakan bahan berkualitas tinggi untuk hasil yang memuaskan</p>
                 </div>
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="img/price-tag.png" alt="Harga" class="feature-icon">
+                <div class="feature-item">
+                    <img src="/static/img/price-tag.png" alt="Harga" class="feature-icon">
                     <h3>Harga Terjangkau</h3>
                     <p>Dapatkan produk berkualitas dengan harga yang bersaing</p>
                 </div>
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="img/working-time.png" alt="Pengalaman" class="feature-icon">
+                <div class="feature-item">
+                    <img src="/static/img/working-time.png" alt="Pengalaman" class="feature-icon">
                     <h3>Pengalaman</h3>
                     <p>Lebih dari 5 tahun melayani kebutuhan percetakan di Blitar</p>
                 </div>
@@ -75,17 +79,18 @@
         </div>
     </section>
 
-   <!-- Footer -->
-     <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
                 <p>&copy; 2025 Citra Abadi. All rights reserved.</p>
                 <p>Nglegok, Kab. Blitar | Telp: (+62) 813-3599-7984</p>
             </div>
-        <div class="footer-dev">
-        <p>Developed with ❤️ by <span class="dev-name">Kelompok 4</span> | <span class="subject">PWEB</span></p>
-    </div>
-</footer>
+            <div class="footer-dev">
+                <p>Developed with ❤️ by <span class="dev-name">Kelompok 4</span> | <span class="subject">PWEB</span></p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Cart Sidebar -->
     <div class="cart-sidebar" id="cart-sidebar">
@@ -102,6 +107,7 @@
         </div>
     </div>
 
-    <script src="assets/main.js"></script>
+    <!-- Perbaikan Path JS -->
+    <script src="/static/js/main.js"></script>
 </body>
 </html>

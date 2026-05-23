@@ -715,7 +715,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff176;
 }
 
-/* Product Modal */
+/* ===== PRODUCT MODAL UPDATED ===== */
 .product-modal {
     display: none;
     position: fixed;
@@ -723,33 +723,153 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1100;
+    background-color: rgba(0,0,0,0.7); /* Lebih gelap agar fokus */
+    z-index: 1500;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
+/* Penyesuaian modal-content agar menyatu dengan modal-pro-wrapper */
 .modal-content {
-    background-color: var(--white);
-    border-radius: 5px;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
+    background-color: transparent; /* Biarkan wrapper yang mengatur background */
+    width: 100%;
+    max-width: 900px;
     position: relative;
+    border-radius: 15px;
 }
 
 .close-modal {
     position: absolute;
-    top: 1rem;
-    right: 1.5rem;
+    top: 15px;
+    right: 20px;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--dark-gray);
+    color: #333;
+    z-index: 10; /* Pastikan di atas form */
 }
 
-.modal-body {
-    padding: 2rem;
+/* --- Container Modal Pro (Kode Baru Anda) --- */
+.modal-pro-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.modal-image-section {
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.modal-image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.modal-form-section {
+    padding: 30px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Form Styling */
+.pro-form-group { margin-bottom: 15px; }
+.pro-form-group label { 
+    display: block; 
+    font-weight: 600;
+    font-size: 0.9rem; 
+    margin-bottom: 5px; 
+    color: #333; 
+}
+
+.pro-form-group input, 
+.pro-form-group select, 
+.pro-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #ddd; 
+    border-radius: 8px; 
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pro-form-group input:focus { 
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.form-row {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; }
+
+/* Payment Selector */
+.payment-selector {
+    display: flex;
+    gap: 10px; 
+}
+.pay-option {
+    flex: 1;
+    cursor: pointer; 
+}
+.pay-option input {
+    display: none; 
+}
+.pay-box { 
+    padding: 10px; 
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.pay-option input:checked + .pay-box { 
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color); 
+}
+
+/* Buttons Modal */
+.modal-footer-btns {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    margin-top: 20px; 
+}
+.btn-main { 
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-outline { 
+    background: white;
+    border: 1.5px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); 
 }
 
 /* Cart Sidebar */
@@ -840,17 +960,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Notification */
-.notification {
+#dynamic-notification {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #4CAF50;
+    background: #28a745; /* Warna hijau sukses */
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 1300;
-    display: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    /* Mulai dari luar layar kanan */
+    transform: translateX(200%); 
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 500;
+}
+
+/* Saat notifikasi muncul */
+#dynamic-notification.show {
+    transform: translateX(0);
+}
+
+/* Warna merah jika terjadi error */
+#dynamic-notification.error {
+    background: #dc3545;
 }
 
 /* Order Form Section */
@@ -889,4 +1022,56 @@ h1, h2, h3, h4, h5, h6 {
     .cart-sidebar {
         width: 300px;
     }
+}
+
+/* Badge Info Produk di Kiri */
+.product-info-badge {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.product-info-badge h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.product-price-tag {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+.price-unit {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Form Input Styling */
+.pro-form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Date & Time Input Reset */
+input[type="date"], input[type="time"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Perbaikan untuk Alamat Lengkap agar tidak berantakan */
+#addressWrapper textarea {
+    border: 1.5px solid var(--accent-color);
+    background: #f0f7ff;
+}
+
+/* Animasi munculnya opsi tambahan */
+#addressWrapper, #bankSelectionWrapper {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

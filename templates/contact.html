@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citra Abadi - Kontak</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/responsive.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Perbaikan Path CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Citra Abadi Logo" class="logo-img">
+                <a href="/">
+                    <!-- Perbaikan Path Gambar -->
+                    <img src="/static/img/logo.png" alt="Citra Abadi Logo" class="logo-img">
                     <span class="logo-text">CITRA ABADI</span>
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Beranda</a>
-                <a href="about.html" class="nav-link">Tentang Kami</a>
-                <a href="product.html" class="nav-link">Produk</a>
-                <a href="contact.html" class="nav-link active">Kontak</a>
-                <a href="developer.html" class="nav-link">Developer</a>
+                <a href="/" class="nav-link">Beranda</a>
+                <a href="/about" class="nav-link">Tentang Kami</a>
+                <a href="/product" class="nav-link">Produk</a>
+                <a href="/contact" class="nav-link active">Kontak</a>
+                <a href="/developer" class="nav-link">Developer</a>
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Cari produk...">
                 </div>
@@ -48,30 +50,27 @@
             </div>
             <div class="contact-content">
                 <div class="contact-map">
-            <div style="position:relative;">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.6338614258734!2d112.21655849999999!3d-8.0366319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed42cf6d5725%3A0xb0b4fecdc6db6f39!2sCitra%20Abadi!5e0!3m2!1sen!2sid!4v1762326892978!5m2!1sen!2sid"
-        width="100%" height="450" style="border:0;" allowfullscreen=""></iframe>
-
-    <a href="https://maps.app.goo.gl/jkBwSo6QBKL2sVWp6"
-     target="_blank"
-     style="position:absolute;top:0;left:0;width:100%;height:100%;"></a>
-        </div>
+                    <div style="position:relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.6338614258734!2d112.21655849999999!3d-8.0366319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed42cf6d5725%3A0xb0b4fecdc6db6f39!2sCitra%20Abadi!5e0!3m2!1sen!2sid!4v1762326892978!5m2!1sen!2sid"
+                            width="100%" height="450" style="border:0;" allowfullscreen=""></iframe>
+                        <a href="https://maps.app.goo.gl/jkBwSo6QBKL2sVWp6" target="_blank" style="position:absolute;top:0;left:0;width:100%;height:100%;"></a>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <h2>Form Ulasan</h2>
-                    <form id="review-form">
+                    <form id="contactForm"> <!-- ID disamakan dengan fungsi di main.js -->
                         <div class="form-group">
-                            <label for="review-name">Nama</label>
-                            <input type="text" id="review-name" required>
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="review-email">Email</label>
-                            <input type="email" id="review-email" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="review-message">Ulasan</label>
-                            <textarea id="review-message" rows="5" required></textarea>
+                            <label for="message">Ulasan</label>
+                            <textarea id="message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn-primary">Kirim Ulasan</button>
                     </form>
@@ -81,17 +80,17 @@
     </section>
 
     <!-- Footer -->
-       <!-- Footer -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
                 <p>&copy; 2025 Citra Abadi. All rights reserved.</p>
                 <p>Nglegok, Kab. Blitar | Telp: (+62) 813-3599-7984</p>
             </div>
-        <div class="footer-dev">
-        <p>Developed with ❤️ by <span class="dev-name">Kelompok 4</span> | <span class="subject">PWEB</span></p>
-    </div>
-</footer>
+            <div class="footer-dev">
+                <p>Developed with ❤️ by <span class="dev-name">Kelompok 4</span> | <span class="subject">PWEB</span></p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Cart Sidebar -->
     <div class="cart-sidebar" id="cart-sidebar">
@@ -100,7 +99,7 @@
             <button id="close-cart">&times;</button>
         </div>
         <div class="cart-items" id="cart-items">
-            <!-- Cart items will be added here dynamically -->
+            <!-- Items added dynamically -->
         </div>
         <div class="cart-total">
             <p>Total: <span id="cart-total-price">Rp 0</span></p>
@@ -113,6 +112,7 @@
         <p>Terima kasih atas ulasan Anda!</p>
     </div>
 
-    <script src="assets/main.js"></script>
+    <!-- Perbaikan Path JS -->
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
